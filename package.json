@@ -1,0 +1,17 @@
+{
+  "name": "rrwp-boilerplate",
+  "version": "1.0.0",
+  "description": "This is a boilerplate project based on react, reflux, sass and webpack",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "nian jian",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^1.7.0"
+  }
+}
