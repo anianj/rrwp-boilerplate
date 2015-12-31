@@ -20,6 +20,10 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 loaders: ['react-hot','babel?presets[]=react'] // 'babel-loader' is also a legal name to reference
+            },
+            {
+                test: /\.sass$/,
+                loaders: ['style','css','sass?indentedSyntax']
             }
         ]
     },

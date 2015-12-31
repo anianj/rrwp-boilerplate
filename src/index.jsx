@@ -2,7 +2,8 @@
 
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    APP = require("./component/app.jsx");
+    Application = require("./component/app/app.jsx"),
+    style = require('./index.sass');
 
-ReactDOM.render(<div><APP /></div>, document.getElementById("app-placeholder"));
 
+ReactDOM.render(<Application />, document.getElementById("app-placeholder"));
