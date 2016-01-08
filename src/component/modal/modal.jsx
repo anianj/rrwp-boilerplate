@@ -8,11 +8,13 @@ module.exports = React.createClass({
     render: function () {
 
         return (
-            <div className="modal">
-                <ReactCSSTransitionGroup transitionName="modal-content" transitionAppear={true} transitionAppearTimeout={50000} transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-                    {this.props.children}
-                </ReactCSSTransitionGroup>
-            </div>
+            <ReactCSSTransitionGroup transitionName="modal"  transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                <div className="modal">
+                    <ReactCSSTransitionGroup transitionName="modal-content" transitionAppear={true} transitionAppearTimeout={500} transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+                        {this.props.children}
+                    </ReactCSSTransitionGroup>
+                </div>
+            </ReactCSSTransitionGroup>
         )
     }
 });
