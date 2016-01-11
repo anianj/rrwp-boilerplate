@@ -1,17 +1,17 @@
-"use strick;"
+"use strict";
 
-module.exports = function (state, action){
-    if (typeof state === 'undefined') {
-        return {};
-    }
-    console.log("this is from reducer:", action);
+var _ = require('lodash');
+
+module.exports = function (state = {}, action){
+
     switch (action.type){
             case 'userLogin':
-                    if(action.error)
-                        console.log('login failed with some error.');
-                    else
-                        console.log('login done.');
-                return state;
+                    if(action.error){
+
+                    }else{
+                        return _.assign({},state);
+                    }
+                break;
             default:
                 return state;
         }

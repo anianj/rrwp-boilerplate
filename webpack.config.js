@@ -14,12 +14,13 @@ module.exports = {
     output: {
         filename: './dist/[name].js'
     },
+    devtool: 'source-map',
     module: {
         loaders: [
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loaders: ['react-hot','babel?presets[]=react'] // 'babel-loader' is also a legal name to reference
+                loaders: ['react-hot','babel?presets[]=react,presets[]=es2015'] // 'babel-loader' is also a legal name to reference
             },
             {
                 test: /\.sass$/,
