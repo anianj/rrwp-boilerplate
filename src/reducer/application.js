@@ -5,7 +5,7 @@ var _ = require('lodash');
 module.exports = function(state = {isLogin: false}, action){
 
     switch (action.type){
-        case "userLoggin":
+        case "userLogin":
             if(action.error){
 
             }else{

@@ -17,12 +17,7 @@ var React = require('react'),
 
 var storeCreator  = compose(applyMiddleware(promiseMiddleware),DevTools.instrument())(createStore),
     store = storeCreator(reducer);
-
-if (module.hot) {
-    module.hot.accept('./reducer/index.js', () =>
-        store.replaceReducer(require('./reducer/index.js')/*.default if you use Babel 6+ */)
-    );
-}
+    console.log(store);
 
 ReactDOM.render(
     <Provider store={store}>
