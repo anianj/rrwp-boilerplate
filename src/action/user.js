@@ -4,7 +4,11 @@ require('isomorphic-fetch');
 
 var createAction = require('redux-actions').createAction;
 
-exports.userLogin = createAction("userLogin",function(username,password){
-        return fetch('http://localhost:8080/ax');
+exports.userLogin = createAction("USER_LOGIN",function(username,password){
+        //return fetch('http://localhost:8080/ax');
+        return {username,password};
 });
-//expect.userLogout = createAction();
+exports.userLogout = createAction("USER_LOGOUT", function () {
+        return {}
+})
+

@@ -17,7 +17,6 @@ var React = require('react'),
 
 var storeCreator  = compose(applyMiddleware(promiseMiddleware),DevTools.instrument())(createStore),
     store = storeCreator(reducer);
-    console.log(store);
 
 ReactDOM.render(
     <Provider store={store}>
